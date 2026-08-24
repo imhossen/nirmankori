@@ -1,0 +1,3 @@
+
+import Link from "next/link";
+export default function Header(){return <header className="sticky top-0 z-40 border-b border-[#e9e2d8] bg-[#fcfbf8]/95 backdrop-blur"><div className="container h-[72px] flex items-center justify-between"><Link href="/" className="font-black text-xl md:text-2xl">নির্মাণ হিসাব</Link><nav className="hidden md:flex gap-7 text-[15px] font-bold"><Link href="/#calculators">ক্যালকুলেটর</Link><Link href="/articles">নির্মাণ গাইড</Link><Link href="/#about">আমাদের সম্পর্কে</Link></nav><Link href="/#calculators" className="rounded-xl bg-[#146b48] text-white px-4 py-2 font-bold md:hidden">হিসাব</Link></div></header>}
