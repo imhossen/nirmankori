@@ -1,9 +1,4 @@
-
-import type {Metadata} from "next";
-import {Noto_Serif_Bengali} from "next/font/google";
-import "./globals.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import type {Metadata} from "next";import {Noto_Serif_Bengali} from "next/font/google";import "./globals.css";import Header from "../components/Header";import Footer from "../components/Footer";import {ThemeProvider} from "../components/ThemeProvider";
 const font=Noto_Serif_Bengali({subsets:["bengali"],display:"swap",weight:["400","500","600","700","800"],variable:"--font-bengali"});
 export const metadata:Metadata={metadataBase:new URL("https://example.com"),title:{default:"নির্মাণ হিসাব — ঘর নির্মাণের সহজ বাংলা ক্যালকুলেটর",template:"%s | নির্মাণ হিসাব"},description:"রং, সিমেন্ট, বালি, ইট, কংক্রিট, টাইলস, প্লাস্টার ও মেঝের আয়তন সহজ বাংলায় হিসাব করুন।",openGraph:{type:"website",locale:"bn_BD",siteName:"নির্মাণ হিসাব"},icons:{icon:"/favicon.svg",shortcut:"/favicon.svg",apple:"/favicon.svg"},themeColor:"oklch(42% .09 155)",robots:{index:true,follow:true}};
-export default function Layout({children}:{children:React.ReactNode}){return <html lang="bn-BD" className={font.variable}><body><Header/><main>{children}</main><Footer/></body></html>}
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="bn-BD" className={font.variable}><body><ThemeProvider><Header/><main>{children}</main><Footer/></ThemeProvider></body></html>}

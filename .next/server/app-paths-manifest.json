@@ -1,6 +1,7 @@
 {
   "/page": "app/page.js",
+  "/articles/[slug]/page": "app/articles/[slug]/page.js",
   "/[calculator]/page": "app/[calculator]/page.js",
-  "/articles/page": "app/articles/page.js",
-  "/articles/[slug]/page": "app/articles/[slug]/page.js"
+  "/unit-converter/page": "app/unit-converter/page.js",
+  "/articles/page": "app/articles/page.js"
 }
