@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{--ink:#171513;--muted:#756f68;--line:#e5ddd1;--cream:#f6f2e9;--green:#146b48;--green2:#0b5b3d}
+:root{--ink:#171513;--muted:#756f68;--line:#e5ddd1;--cream:#f6f2e9;--orange:oklch(55% .15 40);--green:oklch(42% .09 155);--green2:oklch(42% .09 155)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;color:var(--ink);background:#fcfbf8;font-family:"Noto Serif Bengali","Noto Sans Bengali",serif}

@@ -11,3 +11,11 @@ npm run dev
 
 ## ফন্ট
 এই সংস্করণে Bengali Serif typography ব্যবহার করা হয়েছে যাতে দেওয়া reference screenshot-এর মতো বাংলা অক্ষরের character পাওয়া যায়। প্রয়োজন হলে `app/layout.tsx`-এ অন্য Bengali font বদলানো যাবে।
+
+
+## ব্র্যান্ডের রং
+- কমলা: `oklch(55% .15 40)`
+- সবুজ: `oklch(42% .09 155)`
+- সাদা: `#ffffff`
+
+ফ্যাভিকন সরাসরি `app/icon.svg` এবং `public/favicon.svg`-এ যুক্ত করা হয়েছে।
