@@ -4,7 +4,8 @@ import { Plus, RotateCcw, Share2, FileText } from "lucide-react";
 const rates={সাধারণ:{low:2600,high:3600},মাঝারি:{low:3200,high:4400},উন্নত:{low:4000,high:5600}} as const;
 function n(x:number){return x.toLocaleString("bn-BD",{maximumFractionDigits:0})}
 export default function CostCalculator(){
- const [area,setArea]=useState(1200); const [type,setType]=useState<keyof typeof rates>("মাঝারি"); const [city,setCity]=useState("ঢাকা"); const [r,setR]=useState<typeof rates["মাঝারি"]|null>(null);
+ const [area,setArea]=useState(1200); const [type,setType]=useState<keyof typeof rates>("মাঝারি"); const [city,setCity]=useState("ঢাকা"); type CostRate = { low: number; high: number };
+ const [r,setR]=useState<CostRate|null>(null);
  const factor=city==="ঢাকা"?1:city==="চট্টগ্রাম"?0.95:city==="সিলেট"?0.98:0.92;
  const calculate=()=>setR({low:rates[type].low*factor,high:rates[type].high*factor});
  const text=useMemo(()=>r?`নির্মাণ খরচের আনুমানিক হিসাব\nআয়তন: ${n(area)} বর্গফুট\nধরন: ${type}\nএলাকা: ${city}\nআনুমানিক খরচ: ৳${n(area*r.low)} – ৳${n(area*r.high)}\n\nএটি পরিকল্পনার জন্য আনুমানিক range; প্রকৃত খরচ নকশা, উপকরণ, শ্রম ও স্থানীয় বাজারদরের ওপর নির্ভর করবে।`:"",[r,area,type,city]);
